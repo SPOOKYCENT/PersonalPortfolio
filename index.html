@@ -2,12 +2,17 @@
 <html>
   <head>
     <title>Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" src="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +25,54 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <style>
+      body {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        background-color: white;
+        width: 5px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #7734ae;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #482168;
+      }
+      .btn-more {
+        padding: 0 37.5%;
+      }
+      .contacts > a > .bi {
+        margin: 40px;
+        color: white;
+        cursor: pointer;
+        float: left;
+      }
+      .contacts > a > .bi:hover {
+        color: #7734ae;
+      }
+      .btn-outline-primary {
+        color: #7734ae;
+        border-color: #7734ae;
+      }
+      .btn-outline-primary:hover {
+        background-color: #7734ae;
+        border-color: #7734ae;
+      }
+      .cards {
+        margin-top: 5%;
+      }
+      .card {
+        min-width: 400px;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        float: left;
+      }
+    </style>
   </head>
 
   <body class="bg-black">
-    <nav class="navbar bg-black" data-bs-theme="dark">
+    <nav class="navbar bg-black" data-bs-theme="dark" id="navbar">
       <div class="container">
         <ul
           class="container-fluid navbar-nav nav-underline justify-content-evenly flex-md-row"
@@ -32,33 +81,115 @@
             <a href="#me" class="nav-link px-lg-5">Me</a>
           </li>
           <li class="nav-item">
-            <a href="#about-me" class="nav-link px-lg-5">More About Me</a>
+            <a href="#about-me" class="nav-link px-lg-5">Skills</a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link px-lg-5">Contacts</a>
+            <a href="#contacts" class="nav-link px-lg-5">Contacts</a>
           </li>
         </ul>
       </div>
-      <div class="container" data-bs-spy="scroll" data-bs-target="navbar">
-        <svg width="100%" height="400px" id="me">
-          <circle
-            cx="50%"
-            cy="50%"
-            r="100px"
-            stroke="white"
-            stroke-width="5px"
-          />
-        </svg>
-        <div class="m-auto w-100">
+      <div
+        class="container align-items-center"
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+        data-bs-smooth-scroll="true"
+      >
+        <img
+          src="456322.webp"
+          alt=""
+          style="border-radius: 50%; border-color: aliceblue; margin-top: 10%"
+        />
+        <div class="m-auto w-100 container" style="height: 400px">
           <h1 class="text-light text-center">ADARSH KUMAR GUPTA</h1>
           <span class="text-secondary text-center">
             <p>Mechanical Engineering | Part-1 (2022-2023)</p>
             <p>IIT BHU (Varanasi)</p>
           </span>
-          <button class="btn btn-outline-info">More <span></span></button>
+          <a href="#about-me" class="btn-more">
+            <button type="button" class="btn btn-lg btn-outline-primary w-25">
+              More <i class="bi bi-chevron-down"></i>
+            </button>
+          </a>
         </div>
         <div class="about-me m-auto w-100">
-          <h2 class="text-light" id="about-me">More About Me</h2>
+          <h2 class="text-light container" id="about-me">Skills</h2>
+          <div class="cards row">
+            <div class="card text-bg-dark col">
+              <div class="card-body">
+                <h5 class="card-title">Programming Languages</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">Python</li>
+                  <li class="list-group-item">Java</li>
+                  <li class="list-group-item">C</li>
+                  <li class="list-group-item">Javascript</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card text-bg-dark col">
+              <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">HTML</li>
+                  <li class="list-group-item">CSS</li>
+                  <li class="list-group-item">Typescript</li>
+                  <li class="list-group-item">React</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card text-bg-dark col">
+              <div class="card-body">
+                <h5 class="card-title">Machine Learning</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    Data Exploratary Libraries in Python
+                  </li>
+                  <li class="list-group-item">
+                    Data Visualization Libraries in Python
+                  </li>
+                  <li class="list-group-item">
+                    Basic Algorithms(eg:Linear Regression, Logistic
+                    Regression,etc)
+                  </li>
+                  <li class="list-group-item">Basic Libraries for ML</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card text-bg-dark col">
+              <div class="card-body">
+                <h5 class="card-title">Other</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">After Effects</li>
+                  <li class="list-group-item">Blender</li>
+                  <li class="list-group-item">Photoshop</li>
+                  <li class="list-group-item">Autocad</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts">
+          <h4 class="text-light container" id="contacts">Contacts:</h4>
+          <a href="mailto:adarshkr.gupta.mec22@itbhu.ac.in">
+            <h3 class="bi bi-envelope"></h3>
+          </a>
+          <a href="wa.me/9517281701">
+            <h3 class="bi bi-whatsapp"></h3>
+          </a>
+          <a href="">
+            <h3 class="bi bi-instagram"></h3>
+          </a>
+          <a href="">
+            <h3 class="bi bi-discord"></h3>
+          </a>
+          <a href="">
+            <h3 class="bi bi-github"></h3>
+          </a>
+          <a href="">
+            <h3 class="bi bi-linkedin"></h3>
+          </a>
+          <a href="">
+            <h3 class="bi bi-telegram"></h3>
+          </a>
         </div>
       </div>
     </nav>
